@@ -2,23 +2,31 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 
+function Post(props){
+  return(
+    <div>
+    <aside>
+      {props.date}
+    </aside>
+    
+      <h1>{props.title}</h1>
+      <p>{props.abstract}</p>
+      <h2>{props.poster}</h2>
+    </div>
+  )
+}
+
+
+
+
+
+
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Post/>
+      <Post/>
+      <Post/>
     </div>
   );
 }
