@@ -20,15 +20,18 @@ class Data extends Component {
                     return(<div></div>)
                 }
                 return(
-                    <div>
-                    <aside>
-                      {post.published_date}
-                    </aside>
-                    
-                      <h1>{post.title}</h1>
-                      <p>{post.abstract}</p>
-                      <h2>{post.byline}</h2>
-                      <img src={post.multimedia[0].url} alt={post.multimedia[0].caption}/>
+                    <div class="post">
+                        <div class="date">
+                            {post.published_date.slice(0,10)}
+                        </div>
+                        <div class="mid">
+                            <h1>{post.title}</h1>
+                            <p>{post.abstract}</p>
+                            <h2>{post.byline}</h2>
+                        </div>
+                        <div class="pic">
+                            <img src={post.multimedia[0].url} alt={post.multimedia[0].caption}/>
+                        </div>
                     </div>
                   )
             
@@ -48,7 +51,7 @@ class Data extends Component {
 
     render(){
         return(
-            <div>
+            <div class="site">
                 {this.state.data}
             </div>
         )
